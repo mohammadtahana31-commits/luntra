@@ -1,0 +1,5 @@
+{
+  "name": "Luntra",
+  "description": "An application to transform simple user queries into various advanced prompt engineering techniques and to complete user prompts using AI.",
+  "requestFramePermissions": []
+}

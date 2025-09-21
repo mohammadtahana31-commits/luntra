@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luntra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <style>
+      :root {
+        --bg-primary: #0D1117; /* Near-black charcoal */
+        --bg-secondary: #161B22; /* Lighter dark gray */
+        --accent-primary: #33D7FF; /* Electric cyan */
+        --accent-secondary: #E040FB; /* Deep magenta */
+        --text-primary: #E6EDF3; /* Off-white */
+        --text-secondary: #8B949E; /* Light gray */
+        --border-color: #30363D; /* Subtle dark border */
+      }
+
+      /* Scrollbar styling for WebKit (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent-primary);
+        border-radius: 4px;
+        border: 2px solid var(--bg-secondary);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #44E8FF; /* Lighter cyan */
+      }
+
+      /* Scrollbar styling for Firefox */
+      html {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-primary) var(--bg-secondary);
+      }
+      
+      body {
+        background-color: var(--bg-primary); 
+      }
+
+      /* Placeholder for contentEditable div */
+      [contenteditable][data-placeholder]:empty:before {
+        content: attr(data-placeholder);
+        pointer-events: none;
+        display: block;
+        color: var(--text-secondary);
+        opacity: 0.6;
+      }
+      
+      /* Styling for code blocks created in the editor */
+      pre {
+        background-color: #010409; /* Even darker for contrast */
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 0.75rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-family: monospace;
+        margin: 0.5em 0;
+        font-size: 0.9em;
+      }
+      
+      /* Override highlight.js default background for seamless integration */
+      pre code.hljs {
+        background: transparent;
+        padding: 0;
+      }
+
+      /* Keyframes for animations */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.2s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="text-[#E6EDF3]">
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
